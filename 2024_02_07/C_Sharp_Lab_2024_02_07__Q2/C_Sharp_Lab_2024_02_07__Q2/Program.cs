@@ -43,7 +43,7 @@ namespace C_Sharp_Lab_2024_02_07__Q2
 
     public class BanckAccount
     {
-        public int accountNumber;
-        public int accountBalance;
+        public int accountNumber { get; set; }
+        public int accountBalance {  get; set; }
     }
 }
