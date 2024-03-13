@@ -55,13 +55,15 @@ namespace C_Sharp_Lab_2024_30_13__Q1
         }
         private void substraction_btn_Click(object sender, EventArgs e)
         {
-            operatorDisplay_lable.Text = "-";
+            operatorDisplay_lable.Text = "";
+            opration = "-";
             num1 = int.Parse(textBoxDisplay.Text);
             textBoxDisplay.Text = "";
         }
         private void multiplication_btn_Click(object sender, EventArgs e)
         {
             operatorDisplay_lable.Text = "*";
+            opration = "*";
             num1 = int.Parse(textBoxDisplay.Text);
             textBoxDisplay.Text = "";
         }
@@ -69,6 +71,7 @@ namespace C_Sharp_Lab_2024_30_13__Q1
         private void divition_btn_Click(object sender, EventArgs e)
         {
             operatorDisplay_lable.Text = "/";
+            opration = "/";
             num1 = int.Parse(textBoxDisplay.Text);
             textBoxDisplay.Text = "";
         }
@@ -76,10 +79,28 @@ namespace C_Sharp_Lab_2024_30_13__Q1
         private void calculateValue_btn_Click(object sender, EventArgs e)
         {
             num2 = int.Parse(textBoxDisplay.Text);
+           
 
             if(opration == "+")
             {
                 result = num1 + num2;
+            }
+            else if(opration == "-")
+            {
+                result = num1 - num2;
+            }
+            else if (opration == "*")
+            {
+                result = num1 * num2;
+            }
+            else if (opration == "/")
+            {
+                result = num1 / num2;
+            }
+            else
+            {
+                MessageBox.Show($"Operation:{opration}+Result:{result}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
 
             textBoxDisplay.Text = "";
@@ -143,5 +164,11 @@ namespace C_Sharp_Lab_2024_30_13__Q1
             textBoxDisplay.Text += value;
         }
 
+        private void number_0_btn_Click_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Button button = (System.Windows.Forms.Button)sender;
+            string value = button.Tag.ToString();
+            textBoxDisplay.Text += value;
+        }
     }
 }

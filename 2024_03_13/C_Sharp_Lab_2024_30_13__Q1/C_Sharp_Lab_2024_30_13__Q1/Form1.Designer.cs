@@ -45,7 +45,7 @@
             this.number_8_btn_Click = new System.Windows.Forms.Button();
             this.number_9_btn_Click = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.number_0_btn_Click = new System.Windows.Forms.Button();
             this.clearDisplay_btn = new System.Windows.Forms.Button();
             this.calculateValue_btn = new System.Windows.Forms.Button();
             this.operatorDisplay_lable = new System.Windows.Forms.Label();
@@ -58,7 +58,7 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Controls.Add(this.calculateValue_btn);
             this.panel1.Controls.Add(this.clearDisplay_btn);
-            this.panel1.Controls.Add(this.button10);
+            this.panel1.Controls.Add(this.number_0_btn_Click);
             this.panel1.Controls.Add(this.button9);
             this.panel1.Controls.Add(this.number_9_btn_Click);
             this.panel1.Controls.Add(this.number_8_btn_Click);
@@ -318,20 +318,22 @@
             this.button9.Text = ".";
             this.button9.UseVisualStyleBackColor = false;
             // 
-            // button10
+            // number_0_btn_Click
             // 
-            this.button10.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
-            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Arial Black", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(89, 265);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(55, 55);
-            this.button10.TabIndex = 25;
-            this.button10.Text = "0";
-            this.button10.UseVisualStyleBackColor = false;
+            this.number_0_btn_Click.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.number_0_btn_Click.FlatAppearance.BorderSize = 0;
+            this.number_0_btn_Click.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.number_0_btn_Click.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.number_0_btn_Click.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.number_0_btn_Click.Font = new System.Drawing.Font("Arial Black", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.number_0_btn_Click.Location = new System.Drawing.Point(89, 265);
+            this.number_0_btn_Click.Name = "number_0_btn_Click";
+            this.number_0_btn_Click.Size = new System.Drawing.Size(55, 55);
+            this.number_0_btn_Click.TabIndex = 25;
+            this.number_0_btn_Click.Tag = "0";
+            this.number_0_btn_Click.Text = "0";
+            this.number_0_btn_Click.UseVisualStyleBackColor = false;
+            this.number_0_btn_Click.Click += new System.EventHandler(this.number_0_btn_Click_Click);
             // 
             // clearDisplay_btn
             // 
@@ -409,7 +411,7 @@
         private System.Windows.Forms.Button number_3_btn_Click;
         private System.Windows.Forms.Button number_2_btn_Click;
         private System.Windows.Forms.Button clearDisplay_btn;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button number_0_btn_Click;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button number_9_btn_Click;
         private System.Windows.Forms.Button number_8_btn_Click;
